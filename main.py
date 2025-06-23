@@ -11,11 +11,19 @@ import operator
 st.set_page_config(page_title="🎓 Analyse Scolaire", layout="centered")
 st.title("🎓 Chatbot Scolaire - Analyse des Performances")
 
-# Chargement des données avec cache
+"""# Chargement des données avec cache
 @st.cache_data(ttl=5184000)
 def load_data():
     with open("df_finale.pkl", "rb") as f:
         df = pickle.load(f)
+    return df
+
+df_finale = load_data()"""
+
+# Chargement des données CSV avec cache (durée de 60 jours = 5184000 secondes)
+@st.cache_data(ttl=5184000)
+def load_data():
+    df = pd.read_csv("df_finale_nettoye.csv")
     return df
 
 df_finale = load_data()
