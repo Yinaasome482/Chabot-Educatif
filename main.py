@@ -33,7 +33,7 @@ Voici des données sur les performances scolaires d'élèves d'une même classe.
 
 Ta tâche est :
 ### question concernant un élève :
-**Pour un élève spécifique** (par nom ou ID) :
+**Pour un élève spécifique** (par identifiant_unique_eleve ou id_eleve) :
 - Fournis ses notes (notes_matieres, moyenne_t1, moyenne_t2, moyenne_t3), son rang (rang_t1, rang_t2, rang_t3), et ses absences (type_presence, motif_absence).
 - Analyse ses forces (matières avec hautes notes) et faiblesses (matières avec basses notes).
 - Identifie les tendances (ex. matières difficiles, élèves performants,élève moyen, élève faible).
@@ -42,11 +42,11 @@ Ta tâche est :
 - Repère ses points forts et ses difficultés.
 - Fournis des suggestion et des conseils personnalisés pour son amélioration 
 
-### question concernant un classe:
-- donner l'effectif total de la classe et par sexe 
-- donné la moyenne générale de la classe.
-- calculer la moyenne générale par sexe 
-- calculer le taux de reussite  de la classe (moyenne>=5) et selon le sexe
+### question concernant une classe:
+- donner l'effectif total de la classe (effectif_classe_t1) et par sexe (classe_effectif_1.0:masculin, classe_effectif_2.0:feminin)
+- donné la moyenne générale de la classe (moyenne_classe_t1, moyenne_classe_t2, moyenne_classe_t3).
+- donnée le taux de reussite  de la classe (taux_reussite_classe_t1, taux_reussite_classe_t2, taux_reussite_classe_t3) et selon le sexe (taux_reussite_classe_1.0 : garcon,	taux_reussite_classe_2.0 : fille
+)
 - comparer les performances selon le sexe 
 ** identifie:
 - Le meilleur et le plus faible élève selon la moyenne générale par trimestre, aussi la moyenne de la classe en se basant sur cette colonne (moyenne_classe_t1, moyenne_classe_t2, moyenne_classe_t3)
@@ -59,14 +59,37 @@ Ta tâche est :
 
 ### question concernan une école:
 **Dresse un bilan *par classe* :
-- Moyenne générale de chaque classe.
+- Nombre de classe (nb_classes)
+- effectif de l'école (effectif_total_ecole)
+- Moyenne générale de chaque classe (moyenne_classe_t1, moyenne_classe_t2, moyenne_classe_t3).
 ** Intègre aussi :
+- Effectif global des enseignants et selon le sexe(1:masculin, 2:feminin)
+- Effectifs global des élèves et selon le sexe(1:masculin, 2:feminin)
+- Présence de cantine
+- Présence de latrines/toilettes/WC
+- Présence de fontaine/pompe/eau potable
+- Présence d'électricité
+- Milieu: urbain ou rural
+- Matériels didactiques
+- Performances des élèves de façon globale et par sexe(moyenne par trimestre, matières réussies et moins réussies)
+- Assiduité (absences, présences, abandons) global et par sexe(1:masculin, 2:feminin)
 -  Les cas de *violence ou de victimisation* s'ils sont signalés.
 - Les caractéristiques spécifiques de l'école (environnement, effectif, encadrement, etc.).
 - Suggère des recommandations réalistes pour améliorer la qualité de l'enseignement dans l'établissement.
 
 ###Si la question concerne une CEB ou une commune
 **Présente une *analyse comparative entre écoles* :
+- Nombre d'écoles
+- Nombre d'enseignants et par sexe
+- Nombre élèves et par sexe
+- Ratio élèves/Enseignants
+- Proportion d'écoles sans cantine
+- Proportion d'écoles sans latrines
+- Proportion d'écoles sans électricité 
+- Nombre de PDI en prenant comme variable le statut_eleve(2:PDI)
+- Nombre d'élèves avec handicap
+- Performances des élèves de façon globale et par sexe(moyenne par trimestre, matières réussies et moins réussies)
+- Assiduité (absences, présences, abandons) global et par sexe
 - Performances globales (par classe et par école).
 - Classement ou hiérarchisation des écoles si pertinent.
 - Forces et faiblesses communes ou spécifiques.
