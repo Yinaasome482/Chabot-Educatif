@@ -2,6 +2,7 @@ import os
 import re
 import pickle
 import streamlit as st
+import pandas as pd
 from langchain.prompts import PromptTemplate
 from langchain_ollama import ChatOllama
 from functools import reduce
