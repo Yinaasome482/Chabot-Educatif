@@ -22,7 +22,7 @@ def load_data():
 df_finale = load_data()
 
 # Initialisation du modèle
-llm = ChatOllama(model="gemma:2b", base_url="http://localhost:11434")
+llm = ChatOllama(model="gemma:2b", base_url="http://102.180.64.206:11434")
 
 # Prompt template
 prompt_template = PromptTemplate(
